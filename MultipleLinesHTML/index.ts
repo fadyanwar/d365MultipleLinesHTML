@@ -69,6 +69,8 @@ export class MultipleLinesHTML
       { isControlDisabled } = context.mode;
 
     if (this.isDisabled !== isControlDisabled) {
+      //bug fix for disabled flag not being updated
+      this.isDisabled = isControlDisabled;
       // Add control initialization code
       ReactDOM.render(
         // @ts-ignore
